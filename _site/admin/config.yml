@@ -4,7 +4,7 @@ backend:
 
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
-
+ 
 collections:
   - name: "posts"
     label: "Posts"
