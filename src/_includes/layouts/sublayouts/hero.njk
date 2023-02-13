@@ -1,0 +1,29 @@
+<section class="hero width marginauto padding-sides wspace4">
+    {# Looks for top article inside /src/blog #}
+    {% for post in collections.blog %}
+        {% if post.data.top %}
+            {# 
+                The hero variable determines if article.njk will display
+                only the excerpt of the article + "Read more" button, or not.
+            #}
+            {% set hero = true %}
+            {% include "layouts/sublayouts/article.njk" %}
+        {% endif %}
+    {% endfor %}
+
+    {# Bio #}
+    <aside class="bio radius4">
+        <picture>
+            <source srcset="/images/profile.webp" type="image/webp"/>
+            <source srcset="/images/profile-min.jpg" type="image/jpg"/>
+            <img src="/images/profile-min.jpg" class="bio__profile lazy" height="200" alt="Carl Wunsche"/>
+        </picture>
+        <div class="padding-around">
+            <h2 class="wspace2">Hey! Nice to see you here.</h2>
+            <p class="small">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla at tristique rutrum, mi ipsum interdum mi, ac dapibus purus lectus.
+                <br>Picture credit: Unsplash.
+            </p>
+        </div>
+    </aside>
+</section>

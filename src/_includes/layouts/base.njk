@@ -1,0 +1,37 @@
+{# ROOT TEMPLATE #}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    {# HEAD #}
+    <head>
+        {% include "layouts/sublayouts/head.njk" %}
+    </head>
+
+    {# BODY #}
+    <body>
+        <div id="modal-blur" class="modal-blur--regular">
+            {# NAVIGATION BAR #}
+            {% include "layouts/sublayouts/navigation.njk" %}
+
+            {# CONTENT OF THE SECTION YOU ARE IN (HOME,BLOG,POST,ABOUT) #}
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+
+            {# CTA #}
+            {% include "layouts/sublayouts/cta.njk" %}
+            {# FOOTER #}
+            {% include "layouts/sublayouts/footer.njk" %}
+        </div>
+
+        {# MODAL WINDOW #}
+        <div id="modal-bg" class="modal-bg" onClick="modalClose()">
+            <div id="modal" class="modal radius4">
+                <div class="modal__span"></div>
+            </div>
+        </div>
+        <script src="/js/modal.js"></script>
+    </body>
+
+</html>

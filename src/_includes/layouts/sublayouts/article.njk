@@ -1,0 +1,59 @@
+{# ARTICLE TITLE, TIME, COMMENTS, AND CONTENT #}
+<article class="article">
+
+    {# ARTICLE HEADER #}
+    <header class="article__header">
+
+        {# If top post, insert ribbon #}
+        {% if post.data.top %}
+            <span class="ribbon">Top article</span>
+        {% endif %}
+
+        {# If Hero section, display Title and Info using local variables #}
+        {% if hero %}
+            <h1>{{ post.data.title }}</h1>
+            <div class="article__meta">
+                <time datetime="{{ post.data.datetime }}">{{ post.data.properDate }}</time>
+                <span>by {{ post.data.author }}</span>
+                <span>2 comments</span>
+                <span>Tags: {{ post.data.postTags }}</span>
+            </div>
+        {% else %}
+            {# If not, same HTML but using global variables #}
+            <h1>{{ title }}</h1>
+            <div class="article__meta">
+                <time datetime="{{ datetime }}">{{ properDate }}</time>
+                <span>by {{ author }}</span>
+                <span>2 comments</span>
+            </div>
+        {% endif %}
+
+    </header>
+
+    {# ARTICLE CONTENT #}
+    <div class="article__content">
+        {# 
+            If variable hero = true (set inside hero.njk) then
+            it will display only the excerpt of the article
+        #}
+        {% if hero %}
+            {# Use markdown filter here to properly display the content #}
+            {{ post.data.excerpt | markdown | safe }}
+            {# 
+            If not, it will display the entire article
+            NOTE: here it doesn't have to access variable "post" from the for-loop!
+        #}
+        {% else %}
+            {{ content | safe }}
+        {% endif %}
+    </div>
+
+    {# READ MORE BUTTON, only if Hero section #}
+    {% if hero %}
+        <div class="top-btn">
+            <a href="{{ post.url | url }}" title="{{ post.data.title }}" class="top-btn__a">Get an insight</a>
+            {% Icon wanted="book-outline" %}
+        </div>
+    {% endif %}
+
+</article>

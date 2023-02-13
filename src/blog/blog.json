@@ -1,0 +1,5 @@
+{
+    "__comment__": "This json file is where the variable collection.blog points to",
+    "layout": "layouts/post.njk",
+    "tags": "blog"
+}

@@ -1,0 +1,21 @@
+{# Extends the Base layout #}
+{% extends "layouts/base.njk" %}
+
+{# POST LIST #}
+{% block content %}
+    <section class="width marginauto padding-sides wspace4">
+        {# TITLE #}
+        <header class="article__header">
+            <h1>All posts</h1>
+        </header>
+
+        <ul>
+            {% for post in collections.blog %}
+                <li>
+                    {{ post.data.title }} - <a href="{{ post.url | url }}" title="{{ post.data.description }}">{{ post.data.description }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <section>
+        {% endblock %}

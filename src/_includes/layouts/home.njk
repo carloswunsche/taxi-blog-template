@@ -1,0 +1,13 @@
+{# Extends the Base layout #}
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    {# HERO SECTION #}
+    {% include "layouts/sublayouts/hero.njk" %}
+    {# TAGS #}
+    {% include "layouts/sublayouts/tags.njk" %}
+    {# CAROUSEL #}
+    {% include "layouts/sublayouts/carousel.njk" %}
+    {# PRINCIPLES #}
+    {% include "layouts/sublayouts/principles.njk" %}
+{% endblock %}
