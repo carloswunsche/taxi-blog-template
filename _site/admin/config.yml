@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  local_backend: true
+  repo: carloswunsche/taxi-blog-template
   branch: master
 
 media_folder: "_site/images/uploads"
