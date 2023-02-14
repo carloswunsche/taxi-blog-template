@@ -101,12 +101,13 @@ Mobile
   /* HERO */
   .hero {
     flex-direction: column;
+    gap: 4.8rem;
   }
 
   .bio,
   .aside {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     box-shadow: none;
     gap: 1.2em;
@@ -116,12 +117,23 @@ Mobile
     padding: 0;
   }
 
-  .bio h2 {
-    margin-bottom: 0;
+  .bio__pic {
+    border-radius: 9px;
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 12.8em;
   }
 
-  .bio img {
-    border-radius: 9px;
+  /* .bio h2 {
+    margin-bottom: 0;
+  } */
+
+  .bio .small {
+    font-size: 100%;
+  }
+
+  .bio p br {
+    display: none;
   }
 
   /* TAGS */
