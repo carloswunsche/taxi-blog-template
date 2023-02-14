@@ -3,5 +3,10 @@
 node_modules
 src/images/New folder
 src/images/not-used
+
+_site/blog
+_site/css
+_site/js
 _site/images/not-used
 _site/images/New folder
+_site/index.html
