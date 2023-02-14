@@ -1,0 +1,100 @@
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/*
+75EM
+BELOW 1200px:
+Landscape Tablets or close to Laptops (1024px Laptops)
+*/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* 
+59EM
+BELOW 944px:
+Portrait Tablets
+*/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+}
+
+/* 
+44 EM
+BELOW 704px:
+Smaller Tablets
+*/
+
+@media (max-width: 44em) {
+
+  /* TAGS */
+
+  .tags__title {
+    display: block;
+  }
+
+  .tags {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* CARROUSEL */
+  .carousel {
+    height: 21rem
+  }
+
+  .carousel-img {
+    width: 25rem;
+  }
+
+  .carousel-btn--left {
+    right: 97%;
+  }
+
+  .carousel-btn--right {
+    right: -97%;
+  }
+
+  /* PRINCIPLES */
+  .principles {
+    padding: 0px 4.4rem;
+  }
+
+  .principles__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7.4rem;
+    row-gap: 3.4rem;
+  }
+
+  /* CTA */
+  .cta__inner {
+    font-size: 87.5%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-form {
+    gap: 1.4rem;
+  }
+
+  /* Footer */
+  .footer__inner {
+    column-gap: 6.4rem;
+    grid-template-columns: repeat(3, 1fr)
+  }
+
+}
+
+/* 
+34 EM
+BELOW 544px:
+Mobile
+*/
+
+@media (max-width: 34em) {}

@@ -50,7 +50,7 @@ body {
   text-rendering: optimizeSpeed;
 
   background-color: #333;
-  color:  #9B9B9B;
+  color: #9B9B9B;
 
   min-height: 100vh;
   /* Make it flexible to get .modal-blur--regular to work */
@@ -70,9 +70,10 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img, picture {
+img,
+picture {
   display: block;
-  width: 100%;
+  /* width: 100%; */
   max-width: 100%;
   height: auto;
 }
@@ -88,9 +89,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
