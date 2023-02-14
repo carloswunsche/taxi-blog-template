@@ -13,18 +13,19 @@
         {% if hero %}
             <h1>{{ post.data.title }}</h1>
             <div class="article__meta">
-                <time datetime="{{ post.data.date }}">{{ post.data.properDate }}</time>
+                <time datetime="{{ post.data.date }}">{{ post.data.date | postDate }}</time>
                 <span>by {{ post.data.author }}</span>
                 <span>2 comments</span>
-                <span>Tags: {{ post.data.postTags }}</span>
+                {# <span>Tags: {{ post.data.postTags }}</span> #}
             </div>
         {% else %}
             {# If not, same HTML but using global variables #}
             <h1>{{ title }}</h1>
             <div class="article__meta">
-                <time datetime="{{ date }}">{{ properDate }}</time>
+                <time datetime="{{ date }}">{{ date | postDate }}</time>
                 <span>by {{ author }}</span>
                 <span>2 comments</span>
+                {# <span>Tags: {{ post.data.postTags }}</span> #}
             </div>
         {% endif %}
 
