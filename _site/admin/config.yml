@@ -7,7 +7,7 @@ media_folder: "_site/images/post-images"
 public_folder: "/images/post-images"
 
 collections:
-  - name: "posts"
+  - name: "blog"
     label: "Posts"
     folder: "blog"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
