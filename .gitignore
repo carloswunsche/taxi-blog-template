@@ -1,8 +1,7 @@
 .git
 .vscode/tasks.json
 node_modules
-src/images/New folder
-src/images/not-used
+src/images/gitignore
 
 _site/blog
 _site/css
