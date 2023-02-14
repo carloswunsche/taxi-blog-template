@@ -1,5 +1,5 @@
 .git
-.vscode/tasks.json
+.vscode
 node_modules
 src/images/gitignore
 
