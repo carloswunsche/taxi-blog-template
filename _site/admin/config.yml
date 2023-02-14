@@ -3,7 +3,7 @@ backend:
   repo: carloswunsche/taxi-blog-template
   branch: main
 
-media_folder: "_site/images/post-images"
+media_folder: "/images/post-images"
 public_folder: "/images/post-images"
 
 collections:
