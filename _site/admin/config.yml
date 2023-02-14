@@ -8,7 +8,7 @@ public_folder: "/images/post-images"
 
 collections:
   - name: "blog"
-    label: "Posts"
+    label: "Posts1"
     folder: "src/blog"
     create: true
     slug: "{{slug}}"
