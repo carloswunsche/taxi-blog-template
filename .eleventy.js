@@ -37,7 +37,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
-    excerpt_separator: '<!-- excerpt -->',
+    // excerpt_separator: '<!-- excerpt -->',
     // Optional, default is "page.excerpt"
     excerpt_alias: 'excerpt'
   });

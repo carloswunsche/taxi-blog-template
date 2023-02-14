@@ -43,5 +43,10 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - {
+          label: "Image Caption",
+          name: "imageAlt",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
