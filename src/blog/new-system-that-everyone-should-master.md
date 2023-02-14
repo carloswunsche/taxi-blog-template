@@ -2,11 +2,12 @@
 top: true
 title: New System That Everyone Should Master
 author: Carl
-description: Post about the anti-useless-fear system
+description: About the anti-useless-fear system
 date: 2023-02-14T18:31:13.843Z
 postTags: Focus
-image:
-imageAlt:
+image: /images/post-images/meditating.jpg
+imageAlt: Focusing is very important for deep work
+comments: 2
 ---
 
 Nisi quis eleifend quam adipiscing vitae proin. Lorem donec massa sapien faucibus. Duis at consectetur lorem donec massa sapien faucibus et molestie. Dui id ornare arcu odio ut sem. Egestas fringilla phasellus faucibus scelerisque. Nullam luctus eu est eu elementum. Fusce pulvinar viverra ipsum, interdum vestibulum purus gravida et.
