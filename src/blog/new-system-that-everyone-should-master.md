@@ -3,7 +3,7 @@ top: true
 title: New System That Everyone Should Master
 author: Carl
 description: Post about the anti-useless-fear system
-date: 2023-01-04
+date: 2023-02-14T18:31:13.843Z
 postTags: Focus
 imageAlt: here goes the image caption
 properDate: January 4, 2023
