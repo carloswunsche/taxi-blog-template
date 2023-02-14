@@ -8,7 +8,7 @@ public_folder: "/images/post-images"
 
 collections:
   - name: "blog"
-    label: "Posts1"
+    label: "Posts2"
     folder: "src/blog"
     create: true
     slug: "{{slug}}"
@@ -33,7 +33,7 @@ collections:
           name: "date",
           widget: "datetime",
           default: "",
-          date_format: "MM.DD.YYYY",
+          date_format: "MM-DD-YYYY",
           time_format: false,
         }
       - { label: "Tags", name: "postTags", widget: "string", default: "" }
