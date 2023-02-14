@@ -1,7 +1,7 @@
 ---
 top: true
 title: New System That Everyone Should Master
-author: Carl
+author: Carlos Wunsche
 description: About the anti-useless-fear system
 date: 2023-02-14T18:31:13.843Z
 postTags: Focus
