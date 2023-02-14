@@ -15,7 +15,7 @@
             <div class="article__meta">
                 <time datetime="{{ post.data.date }}">{{ post.data.date | postDate }}</time>
                 <span>by {{ post.data.author }}</span>
-                <span>{{ post.data.comments }} comments</span>
+                {# <span>{{ post.data.comments }} comments</span> #}
                 {# <span>Tags: {{ post.data.postTags }}</span> #}
             </div>
         {% else %}
@@ -24,7 +24,7 @@
             <div class="article__meta">
                 <time datetime="{{ date }}">{{ date | postDate }}</time>
                 <span>by {{ author }}</span>
-                <span>{{ comments }} comments</span>
+                {# <span>{{ comments }} comments</span> #}
                 {# <span>Tags: {{ post.data.postTags }}</span> #}
             </div>
         {% endif %}
