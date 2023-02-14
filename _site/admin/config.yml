@@ -30,7 +30,7 @@ collections:
           date_format: "MM-DD-YYYY",
           time_format: false,
         }
-      - { label: "Tags", name: "postTags", widget: "list", default: "Focus" }
+      - { label: "Tags", name: "postTags", widget: "list", default: "" }
       - {
           label: "Featured Image",
           name: "image",
