@@ -19,7 +19,12 @@ collections:
           widget: "hidden",
           default: "layouts/post.njk",
         }
-      - { label: "Featured in Homepage", name: "top", widget: "boolean" }
+      - {
+          label: "Featured in Homepage",
+          name: "top",
+          widget: "boolean",
+          required: false,
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "list", default: ["Carl"] }
       - { label: "Description", name: "description", widget: "string" }
