@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+top: false
 title: Very second post oh yeahh
 author:
   - Carl
@@ -11,8 +12,6 @@ postTags:
 image: /images/post-images/sprite_sheet.png
 imageAlt: Sprite sheet
 ---
-#﻿ Hello
-
-#﻿# I'd like to introduce myself
+#﻿ Hello 
 
 T﻿his is Carl! and this is my second post **yeah!!**
