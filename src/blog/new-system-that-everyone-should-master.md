@@ -1,11 +1,12 @@
 ---
-title: New System That Everyone Should Master
-description: Post about the anti-useless-fear system
-author: "Carl"
-properDate: "January 4, 2023"
-date: "2023-01-04"
 top: true
-postTags: "Focus"
+title: New System That Everyone Should Master
+author: Carl
+description: Post about the anti-useless-fear system
+date: 2023-01-04
+postTags: Focus
+imageAlt: here goes the image caption
+properDate: January 4, 2023
 ---
 
 Nisi quis eleifend quam adipiscing vitae proin. Lorem donec massa sapien faucibus. Duis at consectetur lorem donec massa sapien faucibus et molestie. Dui id ornare arcu odio ut sem. Egestas fringilla phasellus faucibus scelerisque. Nullam luctus eu est eu elementum. Fusce pulvinar viverra ipsum, interdum vestibulum purus gravida et.
