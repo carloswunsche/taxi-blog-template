@@ -8,10 +8,10 @@ public_folder: "/images/post-images"
 
 collections:
   - name: "blog"
-    label: "Blogpostz"
+    label: "Posts"
     folder: "src/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "Layout",
@@ -20,7 +20,10 @@ collections:
           default: "layouts/post.njk",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "list", default: ['Carl']}
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Date", name: "date", widget: "date", default: "" }
+      - { label: "Date", name: "date", widget: "date", default: "`r format(Sys.Date(), "%B %d, %Y")`" }
+      - { label: "Tags", name: "postTags", widget: "list", default: "Focus"}
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image" }
