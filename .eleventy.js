@@ -1,26 +1,27 @@
-const Link = require('./src/_includes/components/Link.js');
-const Icon = require('./src/_includes/components/Icon.js');
-const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
-const htmlmin = require('html-minifier');
+const Link = require("./src/_includes/components/Link.js");
+const Icon = require("./src/_includes/components/Icon.js");
+const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const htmlmin = require("html-minifier");
 const CleanCSS = require("clean-css");
-const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 const markdownIt = require("markdown-it");
-// Optional
-const htmlBeautify = require('html-beautify');
-const htmlPrettify = require('html-prettify');
+const { DateTime } = require("luxon");
+// Optional, not used
+const htmlBeautify = require("html-beautify");
+const htmlPrettify = require("html-prettify");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Quiet mode
   eleventyConfig.setQuietMode(true);
 
   // Passthrough some directories
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/js");
-  eleventyConfig.addPassthroughCopy({"src/_includes/css": "css"}); 
-  // eleventyConfig.addWatchTarget("./src/css"); 
+  eleventyConfig.addPassthroughCopy({ "src/_includes/css": "css" });
+  // eleventyConfig.addWatchTarget("./src/css");
 
   // Browsersync config (fix css not updating)
-  eleventyConfig.setBrowserSyncConfig({watch: true,});
+  eleventyConfig.setBrowserSyncConfig({ watch: true });
 
   // Shortcodes
   eleventyConfig.addShortcode("Link", Link);
@@ -30,7 +31,7 @@ module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(lazyImagesPlugin, {
-    imgSelector: '.lazy', // custom image selector
+    imgSelector: ".lazy", // custom image selector
   });
 
   // Enable excerpts (for the top post in hero section)
@@ -39,16 +40,22 @@ module.exports = function(eleventyConfig) {
     // Optional, default is "---"
     // excerpt_separator: '<!-- excerpt -->',
     // Optional, default is "page.excerpt"
-    excerpt_alias: 'excerpt'
+    excerpt_alias: "excerpt",
   });
 
   // Filters
   // Minify CSS
-  eleventyConfig.addFilter("cssmin", function(code) {
+  eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
+
+  // Format datetime
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
+
   // Markdown-it
-  const md = new markdownIt({html: true});
+  const md = new markdownIt({ html: true });
   eleventyConfig.addFilter("markdown", (content) => {
     return md.render(content);
   });
@@ -70,7 +77,7 @@ module.exports = function(eleventyConfig) {
   //     return pretty;
   //   }
   //   return content;
-  // }); 
+  // });
 
   // Minify HTML
   // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -87,14 +94,14 @@ module.exports = function(eleventyConfig) {
 
   // Return
   return {
-      dir: {
-          input: 'src',
-          includes: '_includes',
-          output: '_site',
-      },
-    templateFormats: ['md','njk','html'],
-    markdownTemplateEngine: 'md',
-    htmlTemplateEngine: 'html',
-    dataTemplateEngine: 'njk',
+    dir: {
+      input: "src",
+      includes: "_includes",
+      output: "_site",
+    },
+    templateFormats: ["md", "njk", "html"],
+    markdownTemplateEngine: "md",
+    htmlTemplateEngine: "html",
+    dataTemplateEngine: "njk",
   };
 };
