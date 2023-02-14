@@ -9,7 +9,8 @@ public_folder: "/images/post-images"
 collections:
   - name: "blog"
     label: "Blogposts"
-    folder: "blog"
+    folder: "src/blog"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
@@ -21,5 +22,5 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "date", default: "" }
-      - { label: "Post Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
