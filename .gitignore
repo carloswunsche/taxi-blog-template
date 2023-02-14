@@ -4,6 +4,7 @@ node_modules
 src/images/gitignore
 
 _site/blog
+_site/README.md
 _site/css
 _site/js
 _site/images
