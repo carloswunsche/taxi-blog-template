@@ -19,10 +19,11 @@ collections:
           widget: "hidden",
           default: "layouts/post.njk",
         }
+      - { label: "It this a TOP post?", name: "top", widget: "boolean" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "list", default: ["Carl"] }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Date", name: "date", widget: "date", default: "" }
+      - { label: "Date", name: "datetime", widget: "date", default: "" }
       - { label: "Tags", name: "postTags", widget: "list", default: "Focus" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image Caption", name: "imageAlt", widget: "string" }
