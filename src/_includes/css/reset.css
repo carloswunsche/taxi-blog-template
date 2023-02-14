@@ -73,7 +73,7 @@ a:not([class]) {
 img,
 picture {
   display: block;
-  /* width: 100%; */
+  width: 100%;
   max-width: 100%;
   height: auto;
 }

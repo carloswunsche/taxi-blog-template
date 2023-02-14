@@ -98,11 +98,37 @@ Mobile
 
 @media (max-width: 34em) {
 
+  /* HERO */
+  .hero {
+    flex-direction: column;
+  }
+
+  .bio,
+  .aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    box-shadow: none;
+    gap: 1.2em;
+  }
+
+  .bio .padding-around {
+    padding: 0;
+  }
+
+  .bio h2 {
+    margin-bottom: 0;
+  }
+
+  .bio img {
+    border-radius: 9px;
+  }
+
   /* TAGS */
 
   .tags {
     grid-template-columns: 1fr;
-    gap: 4em;
+    gap: 2em;
   }
 
   .tag {
@@ -110,6 +136,11 @@ Mobile
   }
 
   /* PRINCIPLES */
+
+  .principles {
+    padding: 0 2.4em;
+  }
+
   .principles__grid {
     grid-template-columns: 1fr;
     row-gap: 3.2em;
@@ -136,11 +167,10 @@ Mobile
 
   /* FOOTER */
   .footer__inner {
-    /* column-gap: 6.4em; */
     grid-template-columns: repeat(2, 1fr);
     padding: 0 3.2em;
     font-size: 125%;
-    column-gap: 12.7em;
+    column-gap: 6.4em;
   }
 }
 
