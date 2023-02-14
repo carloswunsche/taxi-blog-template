@@ -25,23 +25,25 @@ Titles:
 
 */
 
-/* Google Fonts: Lato regular 400, italic 400, bold 700 */
+/* Google Fonts: Lato regular 400, 
+italic 400, bold 700 */
 
 /*******************/
 /* HEADINGS
 /*******************/
 
 h1 {
-    font-size: 5.2rem;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -1.5px;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.5px;
 }
+
 h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    line-height: 1.2;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1.2;
 }
 
 /*******************/
@@ -49,64 +51,79 @@ h2 {
 /*******************/
 
 .ion-icon {
-    fill: currentColor;
-    color: currentColor;
+  fill: currentColor;
+  color: currentColor;
 }
 
 /*******************/
 /* HELPER CLASSES
 /*******************/
 
-.see{
-    background-color: pink;
+.see {
+  background-color: pink;
 }
+
 .small {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
+
 .smaller {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
+
 .centertext {
-    text-align: center;
+  text-align: center;
 }
+
 .wspace2 {
-    margin-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
 }
+
 .wspace4 {
-    margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem;
 }
+
 .wspace8 {
-    margin-bottom: 8.0rem;
+  margin-bottom: 8rem;
 }
+
 .wspace64 {
-    margin-bottom: 6.4rem;
+  margin-bottom: 6.4rem;
 }
+
 .wspace76 {
-    margin-bottom: 7.6rem;
+  margin-bottom: 7.6rem;
 }
+
 .wspace96 {
-    margin-bottom: 9.6rem;
+  margin-bottom: 9.6rem;
 }
+
 .marginauto {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .hide {
-    display: none !important;
+  display: none !important;
 }
+
 .width {
-    max-width: 120rem;
+  max-width: 120rem;
 }
+
 .padding-around {
-    padding: 2.4rem;
+  padding: 2.4rem;
 }
+
 .padding-sides {
-    padding: 0 2.4rem;
+  padding: 0 2.4rem;
 }
+
 .nolist {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*******************/
@@ -114,40 +131,44 @@ h2 {
 /*******************/
 
 .radius1 {
-    border-radius: 50%;
+  border-radius: 50%;
 }
+
 .radius2 {
-    border-radius: 24px;
+  border-radius: 24px;
 }
+
 .radius3 {
-    border-radius: 12px;
+  border-radius: 12px;
 }
+
 .radius4 {
-    border-radius: 9px;
+  border-radius: 9px;
 }
 
 /*******************/
 /* FLEXBOX
 /*******************/
 
-
-
 /*******************/
 /* CSS GRID
 /*******************/
 
 .grid {
-    display: grid;
-    gap: 2.4rem;
+  display: grid;
+  gap: 2.4rem;
 }
+
 .grid--2-cols {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
+
 .grid--4-cols {
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
+
 .grid--5-cols {
-    grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /*******************/
@@ -155,13 +176,13 @@ h2 {
 /*******************/
 
 .btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: currentColor;
-    /*Align content using flexbox*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: currentColor;
+  /*Align content using flexbox*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
