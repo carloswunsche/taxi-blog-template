@@ -1,65 +1,65 @@
 {# ARTICLE TITLE, TIME, COMMENTS, AND CONTENT #}
 <article class="article">
 
-  {# ARTICLE HEADER #}
-  <header class="article__header">
+    {# ARTICLE HEADER #}
+    <header class="article__header">
 
-    {# If top post, insert ribbon #}
-    {% if post.data.top %}
-      <span class="ribbon">Top article</span>
-    {% endif %}
+        {# If top post, insert ribbon #}
+        {% if post.data.top %}
+            <span class="ribbon">Top article</span>
+        {% endif %}
 
-    {# If Hero section, display Title and Info using local variables #}
-    {% if hero %}
-      <h1>{{ post.data.title }}</h1>
-      <div class="article__meta">
-        <time datetime="{{ post.data.date }}">{{ post.data.date | postDate }}</time>
-        <span>by {{ post.data.author }}</span>
-        {# <span>{{ post.data.comments }} comments</span> #}
-        {# <span>Tags: {{ post.data.postTags }}</span> #}
-      </div>
-    {% else %}
-      {# If not, same HTML but using global variables #}
-      <h1>{{ title }}</h1>
-      <div class="article__meta">
-        <time datetime="{{ date }}">{{ date | postDate }}</time>
-        <span>by {{ author }}</span>
-        {# <span>{{ comments }} comments</span> #}
-        {# <span>Tags: {{ post.data.postTags }}</span> #}
-      </div>
-    {% endif %}
+        {# If Hero section, display Title and Info using local variables #}
+        {% if hero %}
+            <h1>{{ post.data.title }}</h1>
+            <div class="article__meta">
+                <time datetime="{{ post.data.date }}">{{ post.data.date | postDate }}</time>
+                <span>by {{ post.data.author }}</span>
+                {# <span>{{ post.data.comments }} comments</span> #}
+                <span>Tags: {{ post.data.postTags }}</span>
+            </div>
+        {% else %}
+            {# If not, same HTML but using global variables #}
+            <h1>{{ title }}</h1>
+            <div class="article__meta">
+                <time datetime="{{ date }}">{{ date | postDate }}</time>
+                <span>by {{ author }}</span>
+                {# <span>{{ comments }} comments</span> #}
+                <span>Tags: {{ postTags }}</span>
+            </div>
+        {% endif %}
 
-  </header>
+    </header>
 
-  {# ARTICLE CONTENT #}
-  <div class="article__content">
-    {# 
+    {# ARTICLE CONTENT #}
+    <div class="article__content">
+        {# 
             If variable hero = true (set inside hero.njk) then
             it will display only the excerpt of the article
         #}
-    {% if hero %}
-      {# Use markdown filter here to properly display the content #}
-      {{ post.data.excerpt | markdown | safe }}
-      {# 
+        {% if hero %}
+            {# Use markdown filter here to properly display the content #}
+            {{ post.data.excerpt | markdown | safe }}
+            {# 
             If not, it will display the entire article
             NOTE: here it doesn't have to access variable "post" from the for-loop!
         #}
-    {% else %}
-      <img
+        {% else %}
+            <img
         class="postImage radius4 lazy"
         src="{{ image | safe }}"
         alt="{{ imageAlt | safe }}"/>
 
-      {{ content | safe }}
-    {% endif %}
-  </div>
-
-  {# READ MORE BUTTON, only if Hero section #}
-  {% if hero %}
-    <div class="top-btn">
-      <a href="{{ post.url | url }}" title="{{ post.data.title }}" class="top-btn__a">Get an insight</a>
-      {% Icon wanted="book-outline" %}
+            {{ content | safe }}
+        {% endif %}
     </div>
-  {% endif %}
+
+    {# READ MORE BUTTON, only if Hero section #}
+    {% if hero %}
+        <div class="top-btn">
+            <a href="{{ post.url | url }}" title="{{ post.data.title }}" class="top-btn__a">Get an insight</a>
+            {% Icon wanted="book-outline" %}
+        </div>
+    {% endif %}
 
 </article>

@@ -44,10 +44,9 @@ collections:
           required: false,
         }
       - {
-          label: "Image Caption",
+          label: "Image Caption (alt tag)",
           name: "imageAlt",
           widget: "string",
-          required: false,
         }
       # - {
       #     label: "Comments",
