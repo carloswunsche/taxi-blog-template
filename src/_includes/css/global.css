@@ -46,6 +46,11 @@ h2 {
   line-height: 1.2;
 }
 
+.section__heading {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
 /*******************/
 /* ION-ICON
 /*******************/
@@ -104,6 +109,10 @@ h2 {
   margin-right: auto;
 }
 
+.displaynone {
+  display: none;
+}
+
 .hide {
   display: none !important;
 }
@@ -146,9 +155,6 @@ h2 {
   border-radius: 9px;
 }
 
-/*******************/
-/* FLEXBOX
-/*******************/
 
 /*******************/
 /* CSS GRID

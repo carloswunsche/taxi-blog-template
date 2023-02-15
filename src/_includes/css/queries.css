@@ -63,10 +63,11 @@ Smaller Tablets
   .hero {
     grid-template-columns: 1fr 1fr;
     gap: 1.8em;
+    margin-bottom: 4.8em;
   }
 
   /* TAGS */
-  .tags__title {
+  .tags-title {
     display: block;
   }
 
@@ -188,6 +189,10 @@ sections.
   .carousel-dots {
     position: unset;
     transform: unset;
+  }
+
+  .carousel-title {
+    display: block;
   }
 
   /* CTA */
