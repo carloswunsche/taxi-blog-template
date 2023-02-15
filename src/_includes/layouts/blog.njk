@@ -2,6 +2,7 @@
 {% extends "layouts/base.njk" %}
 
 {# POST LIST #}
+{# UNDER CONSTRUCTION! #}
 {% block content %}
     <section class="width marginauto padding-sides wspace4">
         {# TITLE #}
@@ -12,7 +13,10 @@
         <ul>
             {% for post in collections.blog %}
                 <li>
-                    {{ post.data.title }} - <a href="{{ post.url | url }}" title="{{ post.data.description }}">{{ post.data.description }}</a>
+                    <a class="post-link" href="{{ post.url | url }}" title="{{ post.data.description }}">{{ post.data.title }}</a>
+                    <ul>
+                        <li>Description: {{ post.data.description }}</li>
+                    </ul>
                 </li>
             {% endfor %}
         </ul>

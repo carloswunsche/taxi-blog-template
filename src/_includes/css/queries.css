@@ -120,6 +120,11 @@ sections.
 
 @media (max-width: 39em) {
 
+  /* MAIN HEADER */
+  .main-header {
+    margin-bottom: 3.4em;
+  }
+
   /* HERO */
   .hero {
     grid-template-columns: 1fr;
@@ -193,6 +198,10 @@ sections.
 
   .carousel-title {
     display: block;
+  }
+
+  .carousel .system-title {
+    font-size: 1.2em;
   }
 
   /* CTA */

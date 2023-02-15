@@ -25,6 +25,17 @@
     cursor: pointer;
 }
 
+/*******************/
+/* POST STUFF
+/*******************/
+
+.postImage {
+    border-radius: 9px;
+    object-fit: cover;
+    object-position: 0 50%;
+    height: 24.8rem;
+    margin-bottom: 3.4rem;
+}
 
 /*******************/
 /* HERO/TOP/ARTICLE
@@ -35,12 +46,6 @@
     grid-template-columns: 1.5fr 1fr;
     gap: 2.4em;
 }
-
-/* .hero {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-} */
 
 .article__header {
     display: flex;
@@ -153,13 +158,6 @@
     justify-items: center;
 }
 
-/* .tags {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.6rem;
-} */
-
 .tags .ion-icon {
     width: 1.6rem;
     height: 1.6rem;
@@ -198,10 +196,8 @@
 }
 
 .carousel {
-    /* max-width: 100rem; */
     display: grid;
     grid-template-columns: 1fr 7fr 7fr 1fr;
-    /* grid-template-columns: 1fr 1.5fr; */
     align-items: center;
     position: relative;
     height: 25rem;
@@ -211,30 +207,13 @@
     justify-items: center;
 }
 
-.carousel h3 {
+.carousel .system-title {
     font-size: 3.2rem;
 }
 
 .carousel-img {
     width: 37rem;
 }
-
-/* .carousel-btn {
-    height: 4rem;
-    width: 4rem;
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-btn--left {
-    right: 100%;
-    transform: translate(-2rem, -50%);
-}
-
-.carousel-btn--right {
-    left: 100%;
-    transform: translate(2rem, -50%);
-} */
 
 .carousel-btn {
     height: 4rem;
@@ -243,7 +222,6 @@
 
 
 .carousel .ion-icon {
-    /* fill:#ffe066; */
     fill: #444;
     transition: all 0.3s;
     height: 100%;
@@ -251,7 +229,6 @@
 }
 
 .carousel-btn:hover .ion-icon {
-    /* fill: #ffec99; */
     fill: currentColor;
     transform: translate(0, -0.5rem);
     cursor: pointer;
@@ -334,11 +311,8 @@
 }
 
 .cta-form input {
-    /* width: 100%; */
-    /* border: none; */
     border: solid 2px #9B9B9B;
     padding: 0.8rem;
-    /* height: 90%; */
     background-color: #222;
 }
 
