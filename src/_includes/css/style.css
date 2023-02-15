@@ -193,18 +193,22 @@
 /******************/
 
 .carousel-wrapper {
-    padding: 2.4rem 4.8rem 4.8rem;
+    padding-bottom: 4.8rem;
     position: relative;
 }
 
 .carousel {
-    max-width: 100rem;
-    display: flex;
+    /* max-width: 100rem; */
+    display: grid;
+    grid-template-columns: 1fr 7fr 7fr 1fr;
+    /* grid-template-columns: 1fr 1.5fr; */
     align-items: center;
-    /* justify-content: space-evenly; */
     position: relative;
-    /* box-shadow: 0 0 16px 1px rgba(0, 0, 0, .2); */
-    height: 30rem;
+    height: 25rem;
+    gap: 1.4em;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
 }
 
 .carousel h3 {
@@ -212,19 +216,10 @@
 }
 
 .carousel-img {
-    /* transform: scale(1.2); */
     width: 37rem;
-    /* width: 28rem; */
-    /* height: 20rem; */
-    margin-left: 3rem;
 }
 
-.system-text {
-    max-width: 46rem;
-    margin-left: 3.5rem;
-}
-
-.carousel-btn {
+/* .carousel-btn {
     height: 4rem;
     width: 4rem;
     position: absolute;
@@ -239,7 +234,13 @@
 .carousel-btn--right {
     left: 100%;
     transform: translate(2rem, -50%);
+} */
+
+.carousel-btn {
+    height: 4rem;
+    width: 4rem;
 }
+
 
 .carousel .ion-icon {
     /* fill:#ffe066; */
@@ -258,9 +259,7 @@
 
 .carousel-dots {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 0;
+    bottom: -20%;
     display: flex;
     gap: 1.6rem;
 }
@@ -336,6 +335,7 @@
     grid-template-columns: 1.5fr 1fr;
     display: grid;
     gap: 2.4rem;
+    align-items: center;
 }
 
 .cta-form input {

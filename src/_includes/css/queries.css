@@ -29,6 +29,26 @@ Portrait Tablets
     gap: 2em;
   }
 
+  .carousel-img {
+    width: 20em;
+  }
+
+  .carousel-btn--left {
+    right: 97%;
+  }
+
+  .carousel-btn--right {
+    right: -97%;
+  }
+
+
+  /* CTA */
+
+  .cta-form {
+    gap: 1.2em;
+  }
+
+
 }
 
 /* 
@@ -44,21 +64,13 @@ Smaller Tablets
     display: block;
   }
 
-  /* CARROUSEL */
-  .carousel {
-    height: 21em
+  /* CAROUSEL */
+  .carousel-wrapper {
+    padding-bottom: 1.4em;
   }
 
-  .carousel-img {
-    width: 25em;
-  }
-
-  .carousel-btn--left {
-    right: 97%;
-  }
-
-  .carousel-btn--right {
-    right: -97%;
+  .carousel-dots {
+    bottom: -10%;
   }
 
   /* PRINCIPLES */
@@ -76,11 +88,13 @@ Smaller Tablets
   .cta__inner {
     font-size: 87.5%;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
   }
 
   .cta-form {
-    gap: 1.4em;
+    gap: 0.2em;
   }
+
 
   /* FOOTER */
   .footer__inner {
@@ -91,12 +105,13 @@ Smaller Tablets
 }
 
 /* 
-34 EM
-BELOW 544px:
-Mobile
+39 EM
+Adjustments to 
+CTA, Carousel and Hero
+sections.
 */
 
-@media (max-width: 34em) {
+@media (max-width: 39em) {
 
   /* HERO */
   .hero {
@@ -124,10 +139,6 @@ Mobile
     height: 12.8em;
   }
 
-  /* .bio h2 {
-    margin-bottom: 0;
-  } */
-
   .bio .small {
     font-size: 100%;
   }
@@ -135,6 +146,61 @@ Mobile
   .bio p br {
     display: none;
   }
+
+  /* CAROUSEL */
+
+  .carousel-wrapper {
+    padding-bottom: 0;
+  }
+
+  .carousel {
+    grid-template-columns: 1fr;
+    height: auto;
+    align-items: center;
+  }
+
+  .carousel-img {
+    width: 100%;
+    border-radius: 9px;
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 12.8em;
+  }
+
+  .carousel-btn--right,
+  .carousel-btn--left {
+    display: none;
+  }
+
+  .carousel-dots {
+    position: unset;
+    transform: unset;
+  }
+
+  /* CTA */
+
+  .cta__inner {
+    grid-template-columns: 1fr;
+    font-size: 100%;
+    padding-bottom: 4.8em
+  }
+
+  .cta-form {
+    /* from grid to flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em;
+  }
+}
+
+/* 
+34 EM
+BELOW 544px:
+Mobile
+*/
+
+@media (max-width: 34em) {
 
   /* TAGS */
 
@@ -161,20 +227,6 @@ Mobile
 
   .principles .small {
     font-size: 112.5%;
-  }
-
-  /* CTA */
-
-  .cta__inner {
-    grid-template-columns: 1fr;
-    font-size: 100%;
-    padding-bottom: 4.8em
-  }
-
-  .cta-form {
-    /* from grid to flexbox */
-    display: flex;
-    flex-direction: column;
   }
 
   /* FOOTER */
