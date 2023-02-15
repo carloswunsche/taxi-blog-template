@@ -59,6 +59,12 @@ Smaller Tablets
 
 @media (max-width: 44em) {
 
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8em;
+  }
+
   /* TAGS */
   .tags__title {
     display: block;
@@ -107,7 +113,7 @@ Smaller Tablets
 /* 
 39 EM
 Adjustments to 
-CTA, Carousel and Hero
+CTA, Carousel, Tags and Hero
 sections.
 */
 
@@ -115,8 +121,9 @@ sections.
 
   /* HERO */
   .hero {
-    flex-direction: column;
-    gap: 4.8rem;
+    grid-template-columns: 1fr;
+    gap: 2.8em;
+    margin-bottom: 6.6em;
   }
 
   .bio,
@@ -147,10 +154,16 @@ sections.
     display: none;
   }
 
+  /* TAGS */
+  .tags__wrapper {
+    margin-bottom: 6.6em;
+  }
+
   /* CAROUSEL */
 
   .carousel-wrapper {
     padding-bottom: 0;
+    margin-bottom: 6.6em;
   }
 
   .carousel {
