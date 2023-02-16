@@ -1,23 +1,54 @@
 {# NAVIGATION BAR #}
 <header class="main-header wspace96">
-    <nav class="width padding-around marginauto">
+    <nav class="main-nav width marginauto">
         <ul class="main-nav__flex nolist">
             <li>
-                <a class="main-nav__home" href="/" title="Homepage">Home</a>
+                <a 
+                href="/" 
+                title="Homepage">
+                    Home
+                </a>
             </li>
             <li>
-                <a href="/blog/" title="Daily thoughts">Blog</a>
+                <a 
+                href="/blog/" 
+                title="Daily thoughts">
+                    Blog
+                </a>
             </li>
             <li>
-                <a onClick="modalOpen()" href="#" title="See my work">Portfolio</a>
-
+                <a 
+                onClick="modalOpen()" 
+                href="#" 
+                title="See my work">
+                    Portfolio
+                </a>
             </li>
             <li>
-                <a onClick="modalOpen()" href="#" title="Who am I?">About</a>
+                <a 
+                onClick="modalOpen()" 
+                href="#" 
+                title="Who am I?">
+                    About
+                </a>
             </li>
             <li>
-                <a href="http://dreampowder.de" title="Dream Powder">My Band</a>
+                <a 
+                href="http://dreampowder.de" 
+                title="Dream Powder">
+                    My Band
+                </a>
             </li>
+            {# <li>
+                <a 
+                href="#" 
+                title="Menu">
+                    {% Icon wanted = "menu", title = "Menu", name = "menu-outline" %}
+                </a>
+            </li> #}
         </ul>
     </nav>
+    {# <button class="btn-mobile-nav"> #}
+
+    {# </button> #}
 </header>

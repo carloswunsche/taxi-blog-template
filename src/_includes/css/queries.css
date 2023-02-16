@@ -52,6 +52,22 @@ Portrait Tablets
 }
 
 /* 
+46 EM
+Hero section H1
+*/
+
+@media (max-width: 46em) {
+  .hero {
+    gap: 1.6rem;
+  }
+
+  .article h1 {
+    font-size: 4.8rem;
+  }
+
+}
+
+/* 
 44 EM
 BELOW 704px:
 Smaller Tablets
@@ -60,10 +76,39 @@ Smaller Tablets
 @media (max-width: 44em) {
 
   /* HERO */
+
   .hero {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.8em;
-    margin-bottom: 4.8em;
+    grid-template-columns: 1fr;
+    gap: 2.8em;
+    margin-bottom: 6.6em;
+  }
+
+  .bio,
+  .aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    box-shadow: none;
+    gap: 1.2em;
+  }
+
+  .bio .padding-around {
+    padding: 0;
+  }
+
+  .bio__pic {
+    border-radius: 9px;
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 12.8em;
+  }
+
+  .bio .small {
+    font-size: 100%;
+  }
+
+  .bio p br {
+    display: none;
   }
 
   /* TAGS */
@@ -123,41 +168,6 @@ sections.
   /* MAIN HEADER */
   .main-header {
     margin-bottom: 3.4em;
-  }
-
-  /* HERO */
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 2.8em;
-    margin-bottom: 6.6em;
-  }
-
-  .bio,
-  .aside {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    box-shadow: none;
-    gap: 1.2em;
-  }
-
-  .bio .padding-around {
-    padding: 0;
-  }
-
-  .bio__pic {
-    border-radius: 9px;
-    object-fit: cover;
-    object-position: 0 30%;
-    height: 12.8em;
-  }
-
-  .bio .small {
-    font-size: 100%;
-  }
-
-  .bio p br {
-    display: none;
   }
 
   /* TAGS */
@@ -229,6 +239,26 @@ Mobile
 
 @media (max-width: 34em) {
 
+  /* MOBILE NAVIGATION*/
+
+
+  /* Pasted from Omnifood */
+  /* .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  } */
+
+
   /* TAGS */
 
   .tags {
@@ -270,3 +300,12 @@ Mobile
 
 /* - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+/* Main 1: #ffe066
+Main 2: #ffd43b 
+Shade: #665a29
+Tints: #ffec99
+Greys: #9B9B9B (text)
+#444 #333 #222 (bgcolor)
+Padding: 2rem
+Whitespace: 9.6rem */
