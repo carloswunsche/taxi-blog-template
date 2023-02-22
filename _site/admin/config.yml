@@ -13,12 +13,13 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "layouts/post.njk",
-        }
+      ### Unnecesary ###
+      # - {
+      #     label: "Layout",
+      #     name: "layout",
+      #     widget: "hidden",
+      #     default: "layouts/post.njk",
+      #   }
       - {
           label: "Featured in Homepage",
           name: "top",
@@ -48,12 +49,4 @@ collections:
           name: "imageAlt",
           widget: "string",
         }
-      # - {
-      #     label: "Comments",
-      #     name: "comments",
-      #     widget: "number",
-      #     default: 0,
-      #     value_type: "int",
-      #     min: 0,
-      #   }
       - { label: "Body", name: "body", widget: "markdown" }
